@@ -12,4 +12,12 @@ var menuItems = {
 
 var skills = ['web design', 'digital marketing', 'ux design', 'web developmnet', 'mobile apps']
 
+var icons = {
+    facebook:   {   link: 'www.facebook.com',     icon: 'fab fa-facebook-f' },
+    twitter:    {   link: 'www.twitter.com',      icon: 'fab fa-twitter'    },
+    instagram:  {   link: 'www.instagram.com',    icon: 'fab fa-instagram'  },
+    youtube:    {   link: 'www.youtube.com',      icon: 'fab fa-youtube'    },
+    pinterest:  {   link: 'www.pinterest.com',    icon: 'fab fa-pinterest'  },
+}
+
  

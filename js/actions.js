@@ -1,6 +1,8 @@
 "use strict"
 $(document).ready(function (){
     buildMenu(menuItems);
+    buildSkills(skills);
+    buildIcons(icons);
     $('a').click(function() {
         console.log('BUM!')
         $('#navbarSupportedContent > ul > li > a').removeClass('active');
@@ -8,11 +10,6 @@ $(document).ready(function (){
 
         $(this).addClass('active')
     });
-});
-
-$( window ).on( "load", function() {
-    $('section#about').html('<h2>SUDIEV</h2>');
-    $('section:gt(1)').append('<h2>PRIVIET</h2>');
 });
 
 $(window).scroll(function() {
@@ -23,13 +20,3 @@ $(window).scroll(function() {
         initialNavigation();
     }
 });
-
-
-
-
-
-// function setNavActive(a) {
-//     // var target = $(event.target);
-//     $(a).addClass('active');
-// }
-   

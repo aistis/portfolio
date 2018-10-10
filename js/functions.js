@@ -15,10 +15,20 @@ function initialNavigation() {
     $('header').removeClass('scroll');
 }
 
+function buildSkills(items) {
+    items.forEach(i => {
+        $('#home .skills').append('<div class="skill">'+i+'</div>');
+    });
+}
 
-
-
-
+function buildIcons(o) {
+    for (var p in o) {
+        var i = '<i class="'+(o[p]).icon+'"></i>',
+            a = '<a href="'+(o[p]).link+'">'+i+'</a>'
+            if (o.hasOwnProperty(p))
+            $('#about .social-icons').append(a);
+    }
+}
 
 
 
