@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/grid.css"> -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/data.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/actions.js"></script>
 </head>
 <body>
     <!-- Header begins -->
-    <header class="transition">
+    <header class="tr">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#">Portfolio</a>
@@ -33,15 +37,15 @@
 
     <!-- Initial jumbotrone begins -->
     <section id="home">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-12">
                     <h2>Hello! i'm</h2>
                     <h1>Aistis Gasparo</h1>
-                    <div class="d-flex justify-content-center skills">
-                        <!-- js buildSkills goes here -->
-                    </div>
-                    <a class="button transition" href="">let's talk new</a>
+                    <a class="button tr" href="">let's talk new</a>
+                </div>
+                <div class="skills">
+                    <!-- js buildSkills goes here -->
                 </div>
             </div>
         </div>
@@ -52,14 +56,14 @@
     
     <!-- About section begins -->
     <section id="about">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-5">
+                <div class="col-xs-12 col-md-5">
                     <div class="box">
                         <img src="assets/person.jpg" alt="Aistis Gasparo - Profesional Web Developer">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-7">
+                <div class="col-xs-12 col-md-7">
                     <h2>About <span>me</span></h2>
                     <div class="stroke"></div>
                     <h3>Hello! i'm Aistis Gasparo</h3>
@@ -68,6 +72,8 @@
                     <div class="social-icons">
                         <!-- social icons goes here -->
                     </div>
+                    <a class="button tr" href="">contact me</a>
+                    <a class="button tr" href="">download cv</a>
                 </div>
             </div>
         </div>
@@ -75,32 +81,102 @@
     <!-- Abaut section ends -->
 
     <!-- Services section begins -->
-    <section></section>
+    <section id="services">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column ">
+                    <h2><span>my</span> services</h2>
+                    <div class="stroke"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="display-services" class="row">
+                    <!-- buildServises JS goes here -->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Services section ends -->
 
     <!-- Resume section begins -->
-    <section></section>
+    <section id="resume">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column ">
+                    <h2><span>my</span> resume</h2>
+                    <div class="stroke"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="display-resume" class="row">
+                    <div class="col-xs-12 col-lg-6">
+                        <div id="education" class="box">
+                            <h4>education</h4>
+                        <!-- buildEducation script goes here -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <div id="work" class="box">
+                            <h4>work</h4>
+                        <!-- buildWork script goes here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Resume section ends -->
+    
+    <!-- Hire me section begins -->
+    <section id="hire-me">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>i'm available for freelance</h2>
+                </div>
+                <div class="col-12">
+                    <a href="#hire-me" class="button tr-ff">contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hire me section ends -->
 
-    <!-- Our work section begins -->
-    <section></section>
-    <!-- Our work section ends -->
+    <!-- Portfolio section begins -->
+    <section id="portfolio">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column ">
+                        <h2><span>my</span> portfolio</h2>
+                        <div class="stroke"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="portfolio-filter" class="row">
+                        <div class="col-12">
+                            <ul></ul>
+                             <!-- buildFiltters goes here -->
+                        </div>
+                    </div>
+                    <div id="display-portfolio" class="row">
+                        <!-- buildFiltters goes here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Portfolio section ends -->
 
     <!-- Blog begisn -->
-    <section></section>
+    <section id="blog"></section>
     <!-- Blog ends -->
 
     <!-- Contact section begins -->
-    <section></section>
+    <section id="contact-me"></section>
     <!-- Contact section ends -->
 
     <!-- Footer begins -->
     <footer></footer>
     <!-- Footer ends -->
 
-    <script src="js/data.js"></script>
-    <script src="js/jQuery.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/actions.js"></script>
 </body>
 </html>

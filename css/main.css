@@ -21,12 +21,59 @@ a:hover {
     text-decoration: none;
 }
 
-.transition {
+.tr {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
-    transition: all 1s ease;
+    transition: all 1s ease; 
+}
+
+#services,
+#recomendations,
+#contact-me {
+    background-color: rgb(243, 243, 243);;
+}
+
+#about,
+#resume,
+#portfolio,
+#blog {
+    background-color: white;
+}
+
+#about,
+#services,
+#resume
+#portfolio,
+#blog {
+    width: 100%;
+}
+
+#display-services,
+#display-resume {
+    padding: 30px 0;
+}
     
+#services > .container-fluid,
+#resume > .container-fluid,
+#portfolio > .container-fluid,
+#blog > .container-fluid,
+#contact-me > .container-fluid {
+    padding: 100px 0;
+}
+
+.tr-ff {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+p {
+    font-size: 0.9em;
+}
+.container-fluid {
+    padding: 0 5%;
 }
 
 /**********************************************
@@ -44,20 +91,53 @@ a:hover {
     text-decoration: none;
     color: white;
 }
-    .button:hover   {
-        border-radius: 0px;
-    }
+.button:hover   {
+    border-radius: 0px;
+}
 
 .box {
     padding: 10px;
     border-radius: 10px;
     border: none;
     box-shadow: rgba(58,78,95,0.2) 0 10px 16px, 
-                rgba(58,78,95,0.05) 0 -5px 16px;
+    rgba(58,78,95,0.05) 0 -5px 16px;
 }
 
 .row {
     padding: 100px 0;
+}
+
+#about h2,
+#services h2,
+#resume h2,
+#portfolio {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+#about h2 > span,
+#services h2 > span,
+#resume h2 > span,
+#portfolio h2 > span     {
+    color: #32c8de;
+}
+
+.stroke {
+    width: 75px;
+    height: 4px;
+        background-color: #3f3f3f;
+    }
+        
+    #services .stroke,
+    #resume .stroke,
+    #portfolio .stroke {
+        margin-left: calc( 50% - 37px );
+        margin-top: 5px;
+    }
+
+#about h3,
+#services h3 {
+    margin:25px 0 10px;
 }
 /**********************************************
 ********************HEADER*********************
@@ -119,76 +199,274 @@ header a:hover {
     position: relative;
     text-align: center;
     color: white;
-    padding-top: 140px;
+    padding-top: 40px;
 }
 
     #home h1 {
-        font-size: 6rem;
+        font-size: 3em;
         font-weight: 600;
     }
-    #home h2 {
-        font-size: 3rem;
+
+    @media (min-width: 500px) {
+        #home > .container  h1 {
+            font-size: 5.5em;
+        }
+        #home > .container  h2 {
+            font-size: 3em;
+        }
     }
+
+    #home h2 {
+        font-size: 1.5em;
+    }
+    #home .button {
+        margin: 30px 0;
+    }
+
 .skills {
     padding: 20px 0;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 300;
+    width: 100%;
 }
     .skill  {
         padding: 0 10px;
         border-right: 1px solid white;
+        display: inline-block;
     }
-    #home > div > div > div > div > div:last-child {
+    #home .skills > div:last-child {
         border: none;
     }
+
+
 
 /**********************************************
 *********************ABOUT*********************
 ***********************************************/
-#about {
-    width: 100%;
+
+
+
+#about .row > div {
+    margin-bottom: 30px;
 }
 
-#about > .container-fluid {
-    background-color: white;
+#about p {
+    margin-bottom: 10px;
 }
 
-#about > .container-fluid:nth-child(1) {
-    box-shadow: #3f3f3f;
-}
+    #about p:first-of-type {
+        margin-top: 40px;
+    }
+
 #about img {
     max-width: 100%;
 }
 
-.social-icons i{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #3f3f3f;
-    color: white;
-    text-align: center;
-    /* padding-left: 13px; */
-    padding-top: 11px;
-    margin-right: 10px;
+.social-icons {
+    margin-top: 20px;
 }
 
+    .social-icons i{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #3f3f3f;
+        color: white;
+        text-align: center;
+        /* padding-left: 13px; */
+        padding-top: 11px;
+        margin-right: 10px;
+        box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, 
+                    rgba(58,78,95,0.05) 0 -5px 15px;
+    }
+        .social-icons i:hover {
+            background-color: #32c8de
+        }
+
+#about .button {
+    padding: 10px 45px; 
+    margin: 40px 20px 0 0;
+    font-size: 0.9em;
+}
 
 /**********************************************
 *******************SERVICES********************
 ***********************************************/
 
+#services .box {
+    background-color: white;
+    height: 90%;
+    padding: 25px;
+    margin: 50px 0px;
+    text-align: center;
+    
+}
+    #services h3 {
+        text-transform: uppercase;
+    }
+    #services .box > .icon-area{
+        text-align: center;
+        color: #32c8de;
+        margin: 40px 0;
+    }
+
+/*  
 
 /**********************************************
 ********************RESUME*********************
 ***********************************************/
 
+#resume h4 {
+    color: #32c8de;
+    margin: 20px 0;
+}
+
+#resume h4,
+#resume h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#resume h5 {
+    margin-bottom: 10px;
+}
+
+#display-resume .box {
+    margin: 50px 0;
+    height: 90%;
+}
+
+#display-resume .iteration > p:nth-child(2)  {
+    text-transform: capitalize;
+    font-style: italic; 
+    margin-bottom: 5px;
+}
+
+#display-resume .box {
+    padding: 25px;
+}
+
+#resume .iteration {
+    margin: 20px 0 30px;
+}
+
 
 /**********************************************
-**********************WORK*********************
+****************  HIRE - ME  ******************
 ***********************************************/
 
+#hire-me {
+    background-color: #32c8de;
+}
+    #hire-me h2 {
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+    }
+    #hire-me .row {
+        text-align: center;
+    }
+    #hire-me .button {
+        background-color: white;
+        color: #32c8de;
+        margin: 30px 0;
+    }
+
+/**********************************************
+******************PORTFOLIO********************
+***********************************************/
+#portfolio-filter ul {
+    line-height: 1em;
+}
+#portfolio-filter li {
+    padding: 0 20px;
+    display: inline-block;
+    /* line-height: 1em; */
+    font-size: initial;
+    font-weight: initial;
+}
+    #portfolio-filter li:hover {
+        color: #32c8de;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+#portfolio-filter {
+    padding: 40px 0;
+    text-align: center;
+}
+#display-portfolio {
+    padding-top: 0px;
+}
+#display-portfolio>div {
+    margin-top: 20px;
+}
+
+    #display-portfolio .hot{
+        background-color: white;
+        animation: 2500ms ease-in-out on;
+    }
+
+    @keyframes on {
+        0%      {padding: 0px; border-radius: 20px;}
+        10%     {padding: 10px;}
+        100%    {padding: 10px;}
+    }
+
+    #display-portfolio .cold{
+        background-color: white;
+        animation: 300ms ease-out off;
+    }
+
+    @keyframes off {
+        1%      {padding: 10px;}
+        75%     {padding: 5px;}
+        100%    {padding: 4px; opacity: 0.01; }
+    }
+
+    #display-portfolio .box>.dim-hidden {
+        visibility: hidden;
+        padding: 10px;
+        position: absolute;
+    }
+
+    #display-portfolio .box>.dim-visible {
+        visibility: visible;
+        padding: 10px;
+        position: absolute;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        z-index: 20;
+    }   
+    
+    #display-portfolio .box {
+        position: relative;
+    }       
+    #display-portfolio img {
+        width: 100%;
+    }
+
+    .dim-30 {
+        filter: brightness(.3);
+    }
+    
+    #display-portfolio h4 {
+        font-size: 0.5em;
+        font-weight: 600;
+        color: white;
+    }
+    #display-portfolio .tag {
+        display: inline-block;
+        font-size: 0.2em;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #32c8de;
+        color: white;
+        border-radius: 20px;
+        
+    }
 
 /**********************************************
 **********************BLOG*********************
