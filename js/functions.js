@@ -72,34 +72,32 @@ function buildFilter(projects) {
         tags.push(t)
     }
     tags.forEach(i => {
-        $('#portfolio-filter>div>ul').append('<li>'+i+'</li>')
+        $('#portfolio-filter>div>ul').append('<li data-tag='+i+'>'+i+'</li>')
     });
-    console.log(tags)
-    return
 }
 
 function filterProjects(t, projects) {
     for (var i in projects) {
+        if ( t === "" ) {
+            return 
+        }
         if ( (projects[i]).tag === t ) {
-            // console.log('Tag inside ittertation: '+(projects[i]).tag)
-            // console.log('Tag we\'re looking for: '+t)
-            console.log('Data to store: '+(projects[i]).img)
-            console.log('Data to store: '+(projects[i]).tag)
+            $(`#display-portfolio > div`).hide();
+            $(`#display-portfolio > div[data-tag="`+t+`"]`).show();
         }
         if ( t === "all" ) {
-            var html = '<div class="col-md-4 col-12"><div class="box"><div class="dim-hidden"><h4>'+(projects[i]).tag+' work</h4><div class="tag">'+(projects[i]).tag+'</div></div><img src="'+(projects[i]).img+'" alt="'+(projects[i]).tag+'"></div></div>'
-            $('#display-portfolio').append(html);
-            console.log(html)
-
-            // console.log('Data to store: '+(projects[i]).img)
-            // console.log('Data to store: '+(projects[i]).tag)
+            $(`#display-portfolio > div`).show();
         }
+    }
+}
 
-        // '<div class="box"><div class="dim-hidden"><h4>'+projects[i]).tag+' work</h4><div class="tag">'+projects[i]).tag+'</div></div><img src="'+projects[i]).img+'" alt="'+projects[i]).tag+'"></div>'
-}}
-
-function buildProjects() {
-    filterProjects("all", projects)
+function buildProjects(projects) {
+    for (var i in projects) {
+        if (projects.hasOwnProperty(i)) {
+            var html = '<div class="col-lg-4 col-md-6 col-12" data-tag='+(projects[i]).tag+'><div class="box"><div class="dim-hidden"><h4>'+(projects[i]).tag+' work</h4><div class="tag">'+(projects[i]).tag+'</div></div><img src="'+(projects[i]).img+'" alt="'+(projects[i]).tag+'"></div></div>'
+            $('#display-portfolio').append(html);
+        }
+    }
 }
 
 

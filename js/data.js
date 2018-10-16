@@ -39,16 +39,16 @@ var work = {
 }
 
 var projects = {
-    1:  {tag: 'illustration',     img: 'assets/projects/1.jpg'},
-    2:  {tag: 'photoshop',        img: 'assets/projects/2.jpg'},
-    3:  {tag: 'photoshop',        img: 'assets/projects/3.jpg'},
-    4:  {tag: 'illustration',     img: 'assets/projects/4.jpg'},   
-    5:  {tag: 'photoshop',        img: 'assets/projects/5.jpg'},
-    6:  {tag: 'illustration',     img: 'assets/projects/6.jpg'},
-    7:  {tag: 'website',          img: 'assets/projects/7.jpg'},
-    8:  {tag: 'website',          img: 'assets/projects/8.jpg'},
-    9:  {tag: 'app',              img: 'assets/projects/9.jpg'},
-    // 10:  {tag: 'website',          img: 'assets/projects/7.jpg'},
-    // 11:  {tag: 'website',          img: 'assets/projects/8.jpg'},
-    // 12:  {tag: 'app',              img: 'assets/projects/9.jpg'},
+    1:      {tag: 'illustration',     img: 'assets/projects/1.jpg'},
+    2:      {tag: 'photoshop',        img: 'assets/projects/2.jpg'},
+    3:      {tag: 'photoshop',        img: 'assets/projects/3.jpg'},
+    4:      {tag: 'illustration',     img: 'assets/projects/4.jpg'},   
+    5:      {tag: 'photoshop',        img: 'assets/projects/5.jpg'},
+    6:      {tag: 'illustration',     img: 'assets/projects/6.jpg'},
+    7:      {tag: 'website',          img: 'assets/projects/7.jpg'},
+    8:      {tag: 'website',          img: 'assets/projects/8.jpg'},
+    9:      {tag: 'app',              img: 'assets/projects/9.jpg'},
+    10:     {tag: 'pms',              img: 'assets/projects/10.jpg'},
+    11:     {tag: 'cms',              img: 'assets/projects/11.jpg'},
+    12:     {tag: 'cms',              img: 'assets/projects/12.jpg'},
 }

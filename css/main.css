@@ -170,6 +170,8 @@ header i   {
 header.scroll   {
     background-color: white;
     
+    box-shadow:  rgba(0,184,224,0.4) 3px -12px 66px,
+                 rgba(0,184,224,0.05) 0 -5px 36px;
 }
     header.scroll a   {
         color: #3f3f3f;
@@ -434,7 +436,7 @@ header a:hover {
 
     #display-portfolio .box>.dim-visible {
         visibility: visible;
-        padding: 10px;
+        padding: 20px;
         position: absolute;
         height: calc(100% - 20px);
         width: calc(100% - 20px);
@@ -443,7 +445,16 @@ header a:hover {
     
     #display-portfolio .box {
         position: relative;
-    }       
+    }
+    
+        #display-portfolio > div > .singular {
+            animation: 5s linear shrink;
+        }
+        @keyframes shrink {
+            0% {width: 100%; height: 100%;}
+            100% {width: 50px; height: 50px;}
+        }
+
     #display-portfolio img {
         width: 100%;
     }
@@ -467,6 +478,77 @@ header a:hover {
         border-radius: 20px;
         
     }
+/**********************************************
+******************TESTIMONIALS*****************
+***********************************************/
+#testimonials {
+     background-color: rgb(243, 243, 243);
+ }
+
+#testimonials .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-image: url(../assets/kaspirovskij.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: contrast(2);
+    margin-left: calc(50% - 75px);
+    margin-bottom: 30px;
+}
+
+#testimonials p {
+    margin: 10px 0;
+    color: #4d4d4d;
+}
+    #testimonials p:nth-child(3) {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+.testimonial {
+    padding: 60px 20%;
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+}
+
+.arrow {
+    padding: 20px 0;
+}
+
+.arrow > div {
+    text-align: center;
+    padding: 5px 5px;
+    margin: 0 5px;
+    width: 40px;
+    background-color: #32c8de;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
+}
+    .arrow > div:hover {
+        cursor: pointer;
+    }
+
+.crumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
+}
+
 
 /**********************************************
 **********************BLOG*********************
