@@ -1,0 +1,97 @@
+#testimonials .contaiter {
+    overflow: hidden;
+    width: 1000px;
+    position: relative;
+}
+
+#testimonials .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(2);
+    margin-left: calc(50% - 75px);
+    margin-bottom: 30px;
+}
+
+#testimonials p {
+    margin: 10px 0;
+    color: #4d4d4d;
+}
+    #testimonials p:nth-child(3) {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+.testimonial {
+    padding: 60px 20%;
+    text-align: center;
+    position: relative;
+}
+
+/* BUILDING SLIDER */
+.swiper {
+    position: relative;
+    display: inline-block;    
+}
+.swiper>.sheet{
+    float: left;
+    }
+
+.swiper button {
+    position: absolute;
+    z-index: 100;
+    top: 90%;
+    text-align: center;
+    padding: 5px 5px;
+    width: 110px;
+    background-color: #32c8de;
+    border-radius: 11px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
+}
+    .swiper button:hover {
+        cursor: pointer;
+    }
+    .swiper button:nth-child(1) {
+        left: calc( 50% - 115px );
+    }
+    .swiper button:nth-child(3) {
+        left: calc( 50% + 10px );
+    }
+
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.arrow > i {
+    color: white;
+    display: inline-block;
+    padding-top: 6px;
+    height: 30px;
+    width: 30px;
+    background-color: #32c8de;
+    border-radius: 5px;
+    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
+}
+
+.crumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
+} 
+    .position > .active {
+        background-color: #32c8de;
+    }

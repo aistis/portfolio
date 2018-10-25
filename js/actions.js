@@ -8,6 +8,11 @@ $(document).ready(function (){
     buildWork(work);
     buildFilter(projects);
     buildProjects(projects);
+    countSheets(testimonials);
+    buildSlides(testimonials);
+    showSlides();
+    buildBlog(blogPosts, 150);
+
     $('a').click(function() {
         $('#navbarSupportedContent > ul > li > a').removeClass('active');
         // pasirasyti if'a kuris patikrintu ar as nespaudziu and logotipo ir jei spaudziu, akd uzsetintu pradiniam linkui ACTIVE   
@@ -31,6 +36,13 @@ $(document).ready(function (){
         var tag = ($(this).attr(`data-tag`))
         filterProjects(tag, projects)
     });
+    
+    $(window).resize(resizeTestimonials);
+
+    
+//     $('.swiper').slick({
+//         // setting-name: setting-value
+//       });
 });
 
 $(window).scroll(function() {
@@ -40,4 +52,5 @@ $(window).scroll(function() {
     if ($(this).scrollTop() < 50) {
         initialNavigation();
     }
+
 });

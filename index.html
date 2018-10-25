@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600|Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/grid.css"> -->
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/data.js"></script>
-    <script src="js/jQuery.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/actions.js"></script>
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- <link rel="stylesheet" href="slick/slick-theme.css"> -->
+    <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
 </head>
 <body>
     <!-- Header begins -->
@@ -34,7 +33,7 @@
     </header>
     <!-- Header ends -->
     
-
+    
     <!-- Initial jumbotrone begins -->
     <section id="home">
         <div class="container">
@@ -79,7 +78,7 @@
         </div>
     </section>
     <!-- Abaut section ends -->
-
+    
     <!-- Services section begins -->
     <section id="services">
         <div class="container-fluid">
@@ -97,7 +96,7 @@
         </div>
     </section>
     <!-- Services section ends -->
-
+    
     <!-- Resume section begins -->
     <section id="resume">
         <div class="container-fluid">
@@ -112,13 +111,13 @@
                     <div class="col-xs-12 col-lg-6">
                         <div id="education" class="box">
                             <h4>education</h4>
-                        <!-- buildEducation script goes here -->
+                            <!-- buildEducation script goes here -->
                         </div>
                     </div>
                     <div class="col-xs-12 col-lg-6">
                         <div id="work" class="box">
                             <h4>work</h4>
-                        <!-- buildWork script goes here -->
+                            <!-- buildWork script goes here -->
                         </div>
                     </div>
                 </div>
@@ -141,73 +140,170 @@
         </div>
     </section>
     <!-- Hire me section ends -->
-
+    
     <!-- Portfolio section begins -->
     <section id="portfolio">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-center">
-                    <div class="d-flex flex-column ">
-                        <h2><span>my</span> portfolio</h2>
-                        <div class="stroke"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div id="portfolio-filter" class="row">
-                        <div class="col-12">
-                            <ul></ul>
-                             <!-- buildFiltters goes here -->
-                        </div>
-                    </div>
-                    <div id="display-portfolio" class="row">
-                        <!-- buildProjects goes here -->
-                    </div>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column ">
+                    <h2><span>my</span> portfolio</h2>
+                    <div class="stroke"></div>
                 </div>
             </div>
-        </section>
-    <!-- Portfolio section ends -->
-
-    <!-- Testimonials begins -->
-    <section id="testimonials">
-        <div class="swiper">
-            <div class="sheet">
-                <!-- <div class="contaiter">
-                    <div class="col-12"> -->
-                        <div class="testimonial">
-                            <div class="img"></div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae quisquam qui totam. Exercitationem commodi cumque pariatur, velit quasi dolor qui architecto officiis corporis delectus deserunt aspernatur labore adipisci veritatis? Optio.</p>
-                            <p>- Mr. Anatoly Kashpirovsky</p>
-                            <p>Deputy of the Russian Duma</p>
-                        </div>
-                        
-                    <!-- </div>
-                </div> -->
-            </div>
-            <div class="controls">
-                <div class="arrow">
-                    <div data-action="left"><</div>
-                    <div data-action="right">></div>
+            <div class="container">
+                <div id="portfolio-filter" class="row">
+                    <div class="col-12">
+                        <ul></ul>
+                        <!-- buildFiltters goes here -->
+                    </div>
                 </div>
-                <div class="position">
-                    <div class="crumb"></div>
-                    <div class="crumb"></div>
-                    <div class="crumb"></div>
+                <div id="display-portfolio" class="row">
+                    <!-- buildProjects goes here -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Testimonials ends -->
-
-    <!-- Blog begins -->
-    <section id="blog"></section>
-    <!-- Blog ends -->
-
-    <!-- Contact section begins -->
-    <section id="contact-me"></section>
-    <!-- Contact section ends -->
-
-    <!-- Footer begins -->
-    <footer></footer>
-    <!-- Footer ends -->
-
-</body>
-</html>
+    <!-- Portfolio section ends -->
+    
+    <!-- Testimonials begins -->
+    <section id="testimonials">
+        <div class="contaiter">
+            <div class="swiper">
+                <!-- buildSlides should go here -->
+            </div>
+            <div class="controls">
+                <div class="arrow">
+                    <i class="fas fa-angle-left pointer" onclick="plusSlides(-1)"></i>
+                    <i class="fas fa-angle-right pointer" onclick="plusSlides(1)"></i>
+                    <!-- <div class="slick-prev" data-action="left"><</div>
+                        <div class="slick-next" data-action="right">></div> -->
+                    </div>
+                    <div class="position">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials ends -->
+        
+        
+        
+        <!-- Blog begins -->
+        <section id="blog">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column ">
+                        <h2><span>my</span> blogs</h2>
+                        <div class="stroke"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- buildBlog script goes here -->
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a class="button" href="">More posts</a>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog ends -->
+        
+        <!-- Contact section begins -->
+        <section id="contact-me">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column ">
+                        <h2><span>my</span> services</h2>
+                        <div class="stroke"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <div class="box">
+                                <div class="form-group">
+                                    <label for=""></label>
+                                    <input type="text" name="Name" id="name" class="double" placeholder="Name">
+                                    <input type="email" name="Email" id="email" class="double snd" placeholder="Email">
+                                    <input type="number" name="Phone" id="phone" class="double" placeholder="Phone">
+                                    <input type="text" name="Website" id="website" class="double snd" placeholder="Website">
+                                    <textarea placeholder="Enter your message"></textarea>
+                                    <a class="button" href="">Send</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="box">
+                                <div class="row row-min">
+                                    <div class="col-3">
+                                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4>Adress:</h4>
+                                        <p>123 6th St. </p>
+                                        <p>Melbourne, FL 32904, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="row row-min">
+                                    <div class="col-3">
+                                        <i class="fas fa-envelope fa-lg"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4>Email:</h4>
+                                        <p>example@yourdomain.com </p>
+                                        <p>info@yourdomain.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="row row-min">
+                                    <div class="col-3">
+                                        <i class="fas fa-phone fa-lg"></i>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4>Phone:</h4>
+                                        <p>Mob: +01 000 000 000</p>
+                                        <p>Fax: +01 000 000 000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section ends -->
+        
+        <!-- Footer begins -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>aistis gasparo</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="social-icons">
+                            <!-- social icons goes here -->
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p>Copy Right &copy; By Aistis Gasparo 2018 | All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer ends -->
+        
+        <script src="js/data.js"></script>
+        <script src="js/jQuery.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/actions.js"></script>
+    </body>
+    </html>

@@ -21,6 +21,10 @@ a:hover {
     text-decoration: none;
 }
 
+.pointer:hover {
+    cursor: pointer;
+}
+
 .tr {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -45,12 +49,14 @@ a:hover {
 #services,
 #resume
 #portfolio,
-#blog {
+#blog,
+#contact-me {
     width: 100%;
 }
 
 #display-services,
-#display-resume {
+#display-resume,
+#contact-me {
     padding: 30px 0;
 }
     
@@ -110,6 +116,8 @@ p {
 #about h2,
 #services h2,
 #resume h2,
+#blog h2,
+#contact-me h2,
 #portfolio {
     text-transform: uppercase;
     font-size: 2.5em;
@@ -118,19 +126,23 @@ p {
 #about h2 > span,
 #services h2 > span,
 #resume h2 > span,
-#portfolio h2 > span     {
+#portfolio h2 > span,
+#blog h2 > span,
+#contact-me h2 > span {
     color: #32c8de;
 }
 
 .stroke {
     width: 75px;
     height: 4px;
-        background-color: #3f3f3f;
+    background-color: #3f3f3f;
     }
         
     #services .stroke,
     #resume .stroke,
-    #portfolio .stroke {
+    #portfolio .stroke,
+    #contact-me .stroke,
+    #blog .stroke {
         margin-left: calc( 50% - 37px );
         margin-top: 5px;
     }
@@ -287,7 +299,8 @@ header a:hover {
             background-color: #32c8de
         }
 
-#about .button {
+#about .button,
+#blog .button {
     padding: 10px 45px; 
     margin: 40px 20px 0 0;
     font-size: 0.9em;
@@ -391,7 +404,6 @@ header a:hover {
 }
     #portfolio-filter li:hover {
         color: #32c8de;
-        cursor: pointer;
         text-decoration: underline;
     }
     
@@ -475,91 +487,158 @@ header a:hover {
         padding: 5px 10px;
         background-color: #32c8de;
         color: white;
-        border-radius: 20px;
-        
+        border-radius: 20px;    
     }
+
 /**********************************************
 ******************TESTIMONIALS*****************
 ***********************************************/
+
+/*Slider content and controls described in slider.css*/
+
 #testimonials {
      background-color: rgb(243, 243, 243);
- }
-
-#testimonials .img {
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-    background-image: url(../assets/kaspirovskij.jpg);
-    background-size: cover;
-    background-position: center;
-    filter: contrast(2);
-    margin-left: calc(50% - 75px);
-    margin-bottom: 30px;
 }
 
-#testimonials p {
-    margin: 10px 0;
-    color: #4d4d4d;
+.position {
+    position: relative;
+    margin-top: 20px;
 }
-    #testimonials p:nth-child(3) {
-        font-size: 1.5em;
-        font-weight: 600;
-        margin-top: 20px;
-    }
-
-.testimonial {
-    padding: 60px 20%;
-    text-align: center;
-}
-
-.controls {
-    text-align: center;
-}
-
-.arrow {
-    padding: 20px 0;
-}
-
-.arrow > div {
-    text-align: center;
-    padding: 5px 5px;
-    margin: 0 5px;
-    width: 40px;
-    background-color: #32c8de;
-    display: inline-block;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
-}
-    .arrow > div:hover {
-        cursor: pointer;
-    }
-
-.crumb {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: white;
-    margin: 10px;
-    display: inline-block;
-    box-shadow: rgba(58,78,95,0.2) 3px 6px 13px, rgba(58,78,95,0.05) 0 -5px 15px;
-}
-
 
 /**********************************************
 **********************BLOG*********************
 ***********************************************/
-
-
+#blog .row>div {
+    margin-bottom: 20px;
+}
+#blog .box {
+    padding: 0;
+    overflow: hidden;
+    min-height: 500px;
+}
+#blog .row {
+    padding-bottom: 50px;
+}
+#blog .row:last-child {
+    padding: 0;
+    text-align: center;
+}
+    #blog .row:last-child .button {
+        margin: 0;
+    }
+.blog-img {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+    #blog .box>.blog-img>img {
+        width: 100%;
+        position: absolute;
+        top: -25%;
+    }
+.blog-content {
+    padding: 10px;
+    position: relative;
+    height: 300px;
+}
+    .blog-content > .button {
+        position: absolute;
+        bottom: 10px;
+    }
+    .blog-content > h5 {
+        margin-bottom: 10px;
+    }
+    .blog-content > .timestamp {
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+    
 /**********************************************
 ********************CONTACT********************
 ***********************************************/
-
-
+#contact-me .container {
+    padding: 0;
+}
+#contact-me .container-fluid{
+    padding-bottom: 0;
+}
+#contact-me .box {
+    background-color: white;
+    padding: 20px;
+}
+#contact-me .form-group {
+    display: inline-block;
+    text-align: center;
+}
+#contact-me input {
+    margin:10px 0;
+    padding-bottom: 10px;
+    background-color: rgba(0,0,0,0.0);
+    border: none;
+    border-bottom: #a2a2a2 solid 1px;
+    outline: 0;
+}
+#contact-me input.double {
+    width: 47%;
+        display: inline-block;
+        float: left;
+}
+    #contact-me input.snd {
+        margin-left: 6%;
+    }
+    #contact-me input:focus::placeholder,
+    #contact-me textarea:focus::placeholder {
+        opacity: 0;
+    }
+ #contact-me textarea {
+    width: 100%;
+    margin:10px 0;
+    background-color: rgba(0,0,0,0.0);
+    border:#a2a2a2 solid 2px;
+    outline: 0;
+    height:150px;
+    resize: none;
+    padding: 10px;
+}
+#contact-me .button {
+    margin-top: 30px;
+}
+#contact-me .container>.row>div:first-child .box,
+#contact-me .container>.row>div:last-child .box {
+    margin-bottom: 20px;
+}
+#contact-me .container>.row>div:last-child .box>.row>div:first-child {
+    text-align: center;
+}
+#contact-me i {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #3f3f3f;
+    color: white;
+    padding-top: 18px;
+}
+#contact-me h4 {
+    margin-bottom: 10px;
+}
+.row-min {
+    padding: 0;
+}
 /**********************************************
 ********************FOOTER*********************
 ***********************************************/
+footer {
+    background-color: black;
+    text-align: center;
+}
+footer h2 {
+    text-transform: uppercase;
+    color: white;
+}
+footer i {
+    margin: 0 5px;
+}
+footer p {
+    margin-top: 20px;
+    color: #a2a2a2;
+}

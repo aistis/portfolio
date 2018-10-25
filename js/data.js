@@ -52,3 +52,17 @@ var projects = {
     11:     {tag: 'cms',              img: 'assets/projects/11.jpg'},
     12:     {tag: 'cms',              img: 'assets/projects/12.jpg'},
 }
+
+var testimonials = {
+    1:      {name: 'Mr. Anatoly Kashpirovsky', title: 'Deputy of the Russian Duma',    img: 'assets/projects/1.jpg', quote: 'The options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.' },
+    2:      {name: 'Nikola Tesl', title: 'Tesla Electric Light & Manufacturing',    img: 'assets/projects/2.jpg', quote: 'Specifying a value other than visible (the default) creates a new block formatting conquote. This is necessary for technical reasons.' },
+    3:      {name: 'Ole Einar Bjørndalen', title: 'The King of Biathlon',    img: 'assets/projects/3.jpg', quote: 'In order for overflow to have an effect, the block-level container must have either a set height (height or max-height) or white-space set to nowrap.' },
+    4:      {name: 'Mao Zedong', title: 'Chinese communist revolutionary',    img: 'assets/projects/4.jpg', quote: 'Depends on the user agent. If content fits inside the padding box, it looks the same as visible, but still establishes.' },
+}
+
+var blogPosts = {
+    1:    {   title: 'Dolor sit, amet',                 timestamp: '21st May 2018',     teaser: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab id soluta vel dolore harum atque deserunt expedita aut, suscipit doloremque sequi itaque dolorum quasi, labore molestias aspernatur recusandae blanditiis perspiciatis.',                 img:'assets/projects/6.jpg'},
+    2:    {   title: 'Ab id soluta vel harum',   timestamp: '12th June 2018',    teaser: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae harum sunt atque laudantium praesentium sint alias enim. Temporibus, numquam consectetur totam necessitatibus assumenda asperiores, voluptates, ad sequi sit fugit voluptatem?',    img:'assets/projects/7.jpg'},
+    3:    {   title: 'Adipisicing elit',                timestamp: '5th October 2018',  teaser: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum optio earum ducimus at. Ducimus rerum nostrum architecto harum voluptas eligendi cum magnam at corrupti veritatis unde quasi, cupiditate perferendis quas.',                             img:'assets/projects/8.jpg'},
+}
+
