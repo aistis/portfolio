@@ -34,5 +34,6 @@ function sliceText(string, length) {
     for (var i = 0; i <= length; i++) {
         if (string[i] === ' ')
             indices.push(i);
-    }   return ( string.slice(0, indices[indices.length - 1]) + '... ');
+    }   
+    return ( string.slice(0, indices[indices.length - 1]) + '... ');
 }

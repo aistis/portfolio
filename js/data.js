@@ -1,13 +1,14 @@
 "use strict"
 
 var menuItems = {
-    home:       {   title: 'Home',      href: '#home'    },
-    about:      {   title: 'About',     href: '#home'    },
-    services:   {   title: 'Services',  href: '#home'    },
-    resume:     {   title: 'Resume',    href: '#home'    },
-    work:       {   title: 'Our Work',  href: '#home'    },
-    blog:       {   title: 'Blog',      href: '#home'    },
-    contact:    {   title: 'Contact',   href: '#home'    },
+    home:       {   title: 'Home',      href: '#home'       },
+    about:      {   title: 'About',     href: '#about'      },
+    services:   {   title: 'Services',  href: '#services'   },
+    resume:     {   title: 'Resume',    href: '#resume'     },
+    work:       {   title: 'Our Work',  href: '#portfolio'  },
+    blog:       {   title: 'Blog',      href: '#blog'       },
+    contact:    {   title: 'Contact',   href: '#contact-me' },
+    chart:    {   title: 'Chart',   href: '#chart' },
 }
 
 var skills = ['web design', 'digital marketing', 'ux design', 'web developmnet', 'mobile apps']
@@ -66,3 +67,15 @@ var blogPosts = {
     3:    {   title: 'Adipisicing elit',                timestamp: '5th October 2018',  teaser: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum optio earum ducimus at. Ducimus rerum nostrum architecto harum voluptas eligendi cum magnam at corrupti veritatis unde quasi, cupiditate perferendis quas.',                             img:'assets/projects/8.jpg'},
 }
 
+var chart_data = {
+    title: 'Mano finansine situacija',
+    axis_titles: {
+        x: 'Months',
+        y: 'Cashflow, Eur'
+    },
+    data_x: ['Sausis', 'Vasaris', 'Kovas', 'Balandis'],
+    data_y: [
+        [0, 600, 200, -200],
+        [0, 400, 100, 150]
+    ]
+}

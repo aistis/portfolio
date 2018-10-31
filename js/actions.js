@@ -8,7 +8,7 @@ $(document).ready(function (){
     buildWork(work);
     buildFilter(projects);
     buildProjects(projects);
-    countSheets(testimonials);
+    // countSheets(testimonials);
     buildSlides(testimonials);
     showSlides();
     buildBlog(blogPosts, 150);
@@ -36,13 +36,12 @@ $(document).ready(function (){
         var tag = ($(this).attr(`data-tag`))
         filterProjects(tag, projects)
     });
-    
-    $(window).resize(resizeTestimonials);
-
-    
-//     $('.swiper').slick({
-//         // setting-name: setting-value
-//       });
+    $(`#chart-update`).click(function (e) { 
+        e.preventDefault();
+        updateChartData();
+        buildChart();
+        clearForm();        
+    });
 });
 
 $(window).scroll(function() {
@@ -52,5 +51,4 @@ $(window).scroll(function() {
     if ($(this).scrollTop() < 50) {
         initialNavigation();
     }
-
 });

@@ -1,6 +1,6 @@
 #testimonials .contaiter {
     overflow: hidden;
-    width: 1000px;
+    width: 100%;
     position: relative;
 }
 
@@ -28,13 +28,14 @@
 .testimonial {
     padding: 60px 20%;
     text-align: center;
-    position: relative;
+    position: relative; 
 }
 
 /* BUILDING SLIDER */
 .swiper {
     position: relative;
-    display: inline-block;    
+    display: inline-block;
+    width: 100%;    
 }
 .swiper>.sheet{
     float: left;

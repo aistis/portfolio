@@ -113,19 +113,6 @@ function buildProjects(projects) {
 // ************* TESTIMONIALS BUILD *************
 // 
 
-var settings = {
-    slides: 0
-}
-
-function countSheets(tes) {
-    var n = 0;
-        for (var i in tes) {
-        n = +i; 
-        };
-    console.log('length of sliede will be: '+n)
-    return settings.slides = n
-};
-
 function buildSlides (t) {
  // Build slides
     for (var i in t) {
@@ -134,7 +121,7 @@ function buildSlides (t) {
             name = ((t[i]).name),
             title = ((t[i]).title);
 
-        $('.swiper').append('<div class="sheet" data-sheet="'+i+'">\
+        $('.swiper').append('<div class="sheet col-12" data-sheet="'+i+'">\
                                 <div class="testimonial">\
                                     <div class="img"></div>\
                                     <p>'+quote+'</p>\
@@ -147,19 +134,6 @@ function buildSlides (t) {
         $('.position').append('<div class="crumb pointer"></div>')
         $('.swiper > .sheet').css('display','none')
     }
-    resizeTestimonials(t);
-}
-
-function resizeTestimonials(t){
-    var w = window.innerWidth - 18,
-        n = settings.slides,
-        box = n * w;
-
-        // Set stiles and parameters for slides
-        $('.swiper .sheet').css( "width", w );
-        $('#testimonials .contaiter').css( "width", w );
-        $('.swiper').attr('width', box);
-    console.log(window.innerWidth);
 }
 
 function buildBlog (t, charNum) {
@@ -193,12 +167,3 @@ function buildBlog (t, charNum) {
 // ******************************************
 // *************CHEAT LIST*******************
 // ******************************************
-
-
-// // BUILD AN ITEM FROM SELECTED OBJECT
-// function funkcionName(objectName) {
-//     for (var key in objectName) {      
-//         if (objectName.hasOwnProperty(key)) 
-//         $('nav > ul').append('<li class="nav-item"><a class="nav-link" href="'+ (objectName[key]).elementName + '">'+(objectName[key]).elementName+'</a></li>');
-//     }   *************Use append to add piece of HTML one after another. .html used for replacing an element ******************
-// }
