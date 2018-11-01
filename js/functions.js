@@ -186,15 +186,14 @@ function buildBlog (t, charNum) {
 //             console.log('BAMMM!!!'+linkMap.position.indexOf(current))
 //         }
 //     };
-    // function setMenuActive(current, active, compare) {
-        // current = $('nav li .active').offset().top
-        // curent active element position    
-        // active = $('nav li .active')[0].hash
-        // active element hash
-        // compare = $($('nav li .active')[0].hash).offset().top
-        // value tu compare with   
+    function setMenuActive() {
+        console.log(`**************`)
+        console.log('Current active elemet position: ' + $('nav li .active').offset().top)
+        console.log('Active element hash: '+ $('nav li .active')[0].hash)
+        console.log('Value tu compare with: '+ $($('nav li .active')[0].hash).offset().top)
+        console.log(`**************`)
         
-    // }
+    }
 
 // ******************************************
 // *************CHEAT LIST*******************

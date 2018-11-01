@@ -62,18 +62,13 @@ $(document).ready(function (){
         // console.log($(this)[0].firstChild.hash)
         // console.log($(position).offset())
     });
-
     // buildMap()
 });
 
 $(window).scroll(function() {
     // let tags = [];
-    console.log(`**************`)
-    console.log('Current active elemet position: ' + $('nav li .active').offset().top)
-    console.log('Active element hash: '+ $('nav li .active')[0].hash)
-    console.log('Value tu copare with: '+ $($('nav li .active')[0].hash).offset().top)
-    console.log(`**************`)
-    
+   
+    setMenuActive();    
     if ($(this).scrollTop() > 50) {
         solidNavigation();
         // setMenuActive($(document).scrollTop());
