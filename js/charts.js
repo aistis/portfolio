@@ -4,12 +4,19 @@ let chartData = {
     income: []
 }
 function updateChartData () { 
-    chartData.labels.push($('#month').val())
-    chartData.income.push($('#earnings').val())
+    let label = ($('#month').val()),
+        num = ($('#earnings').val());
+    if (label !== "" || num !== "") {
+        chartData.labels.push($('#month').val())
+        chartData.income.push($('#earnings').val())
+    }
+    else 
+    return false
 }
 function clearForm () { 
     $('#month').val('')
     $('#earnings').val('')
+    $('#month').focus()
 }
 
 function buildChart() {

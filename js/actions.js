@@ -36,19 +36,51 @@ $(document).ready(function (){
         var tag = ($(this).attr(`data-tag`))
         filterProjects(tag, projects)
     });
+    
     $(`#chart-update`).click(function (e) { 
         e.preventDefault();
         updateChartData();
         buildChart();
         clearForm();        
     });
+
+    $(`#earnings`).keypress(function (e) { 
+        if (e.key === 'Enter') {
+            console.log('Paspaustas klavisas: "'+ e.key + '" - Vyksta reikalai');
+            updateChartData();
+            buildChart();
+            clearForm();  
+        }
+    });
+    $("nav li").click(function (){
+        let link = $(this)[0].firstChild.attributes.href.nodeValue,
+            position = $(this)[0].firstChild.hash;
+        $('html, body').animate({
+            scrollTop: $(link).offset().top
+        }, 2000);
+
+        // console.log($(this)[0].firstChild.hash)
+        // console.log($(position).offset())
+    });
+
+    // buildMap()
 });
 
 $(window).scroll(function() {
+    // let tags = [];
+    console.log(`**************`)
+    console.log('Current active elemet position: ' + $('nav li .active').offset().top)
+    console.log('Active element hash: '+ $('nav li .active')[0].hash)
+    console.log('Value tu copare with: '+ $($('nav li .active')[0].hash).offset().top)
+    console.log(`**************`)
+    
     if ($(this).scrollTop() > 50) {
         solidNavigation();
+        // setMenuActive($(document).scrollTop());
     }
     if ($(this).scrollTop() < 50) {
         initialNavigation();
     }
+    // console.log($(document).scrollTop())
+    // setMenuActive()
 });

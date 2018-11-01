@@ -162,7 +162,39 @@ function buildBlog (t, charNum) {
                                     </div>')
         }
 }
-
+// let linkMap = {};
+//     function buildMap() { 
+//         let     links = $('nav li a'),
+//         href = [],
+//         position = [];
+//         for (let i = 0; i < links.length; i++) {
+//             const element = links[i];
+//             href.push($(links[i]).attr('href'));
+//         }
+//         for (let i = 0; i < links.length; i++) {
+//             const element = $(links[i]).attr('href');
+//             position.push($(element).offset().top);
+//         }
+//         linkMap.href = href;
+//         linkMap.position = position;
+//         // console.log(linkMap.position)
+//     };
+    
+//     function setMenuActive(current) {
+//         // toggle class for menu
+//         if (linkMap.position.indexOf(current) > 0) {
+//             console.log('BAMMM!!!'+linkMap.position.indexOf(current))
+//         }
+//     };
+    // function setMenuActive(current, active, compare) {
+        // current = $('nav li .active').offset().top
+        // curent active element position    
+        // active = $('nav li .active')[0].hash
+        // active element hash
+        // compare = $($('nav li .active')[0].hash).offset().top
+        // value tu compare with   
+        
+    // }
 
 // ******************************************
 // *************CHEAT LIST*******************
