@@ -66,17 +66,20 @@ $(document).ready(function (){
         // console.log($(position).offset())
     });
 });
-
-$(window).scroll(function() {
-    // let tags = [];
-
-    if ($(this).scrollTop() > 50) {
-        solidNavigation();
-    }
-    if ($(this).scrollTop() < 50) {
-        initialNavigation();
-    }
+    $(window).scroll(function() {
+        // let tags = [];
+    
+        if ($(this).scrollTop() > 50) {
+            solidNavigation();
+        }
+        if ($(this).scrollTop() < 50) {
+            initialNavigation();
+        }
+    });
+$(document).ready(function () {
+    $(window).scroll(function() {
+        setMenuActive();    
+    });
 });
-$(window).scroll(function() {
-    setMenuActive();    
-});
+    
+

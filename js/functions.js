@@ -6,6 +6,7 @@ function buildMenu(items) {
         $('nav ul').append('<li class="nav-item"><a class="nav-link" href="'+ (items[key]).href + '">'+(items[key]).title+'</a></li>');
     }
     $('#navbarSupportedContent > ul > li:nth-child(1) > a').addClass('active')
+    console.log('Link class is set to: ACTIVE')
 }
 
 function solidNavigation() {
