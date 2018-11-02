@@ -8,10 +8,13 @@ $(document).ready(function (){
     buildWork(work);
     buildFilter(projects);
     buildProjects(projects);
-    // countSheets(testimonials);
     buildSlides(testimonials);
     showSlides();
     buildBlog(blogPosts, 150);
+    if ($('nav').offset().top > 50) {
+        solidNavigation();
+        console.log(`Reikia keisti header klase!!!`)
+    }
 
     $('a').click(function() {
         $('#navbarSupportedContent > ul > li > a').removeClass('active');
@@ -62,20 +65,18 @@ $(document).ready(function (){
         // console.log($(this)[0].firstChild.hash)
         // console.log($(position).offset())
     });
-    // buildMap()
 });
 
 $(window).scroll(function() {
     // let tags = [];
-   
-    setMenuActive();    
+
     if ($(this).scrollTop() > 50) {
         solidNavigation();
-        // setMenuActive($(document).scrollTop());
     }
     if ($(this).scrollTop() < 50) {
         initialNavigation();
     }
-    // console.log($(document).scrollTop())
-    // setMenuActive()
+});
+$(window).scroll(function() {
+    setMenuActive();    
 });

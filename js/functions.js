@@ -192,7 +192,6 @@ function buildBlog (t, charNum) {
         console.log('Active element hash: '+ $('nav li .active')[0].hash)
         console.log('Value tu compare with: '+ $($('nav li .active')[0].hash).offset().top)
         console.log(`**************`)
-        
     }
 
 // ******************************************
