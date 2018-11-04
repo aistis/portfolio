@@ -11,16 +11,6 @@ $(document).ready(function (){
     buildSlides(testimonials);
     showSlides();
     buildBlog(blogPosts, 150);
-    if ($('nav').offset().top > 50) {
-        solidNavigation();
-        console.log(`Reikia keisti header klase!!!`)
-    }
-
-    $('a').click(function() {
-        $('#navbarSupportedContent > ul > li > a').removeClass('active');
-        // pasirasyti if'a kuris patikrintu ar as nespaudziu and logotipo ir jei spaudziu, akd uzsetintu pradiniam linkui ACTIVE   
-        $(this).addClass('active')
-    });
     $('#display-portfolio .box').hover(
         function () {
             $(this).removeClass(`cold`)
@@ -49,37 +39,34 @@ $(document).ready(function (){
 
     $(`#earnings`).keypress(function (e) { 
         if (e.key === 'Enter') {
-            console.log('Paspaustas klavisas: "'+ e.key + '" - Vyksta reikalai');
             updateChartData();
             buildChart();
             clearForm();  
         }
     });
     $("nav li").click(function (){
-        let link = $(this)[0].firstChild.attributes.href.nodeValue,
-            position = $(this)[0].firstChild.hash;
+        let link = $(this)[0].firstChild.attributes.href.nodeValue;
         $('html, body').animate({
             scrollTop: $(link).offset().top
         }, 2000);
-
-        // console.log($(this)[0].firstChild.hash)
-        // console.log($(position).offset())
     });
 });
-    $(window).scroll(function() {
-        // let tags = [];
-    
-        if ($(this).scrollTop() > 50) {
-            solidNavigation();
-        }
-        if ($(this).scrollTop() < 50) {
-            initialNavigation();
-        }
-    });
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+        solidNavigation();
+    }
+    if ($(this).scrollTop() < 50) {
+        initialNavigation();
+    }
+});
 $(document).ready(function () {
+    setMenuActive()
     $(window).scroll(function() {
         setMenuActive();    
     });
 });
+$(function() {
+    console.log( "The DOM is now loaded and can be manipulated." );
+    });
     
 

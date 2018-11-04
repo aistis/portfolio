@@ -5,10 +5,10 @@ let chartData = {
 }
 function updateChartData () { 
     let label = ($('#month').val()),
-        num = ($('#earnings').val());
+        num = $('#earnings').val();
     if (label !== "" || num !== "") {
         chartData.labels.push($('#month').val())
-        chartData.income.push($('#earnings').val())
+        chartData.income.push(($('#earnings').val())*1)
     }
     else 
     return false
@@ -18,53 +18,27 @@ function clearForm () {
     $('#earnings').val('')
     $('#month').focus()
 }
-
-function buildChart() {
     
-    var ctx = document.getElementById("myFinances");
-    var myFinancesChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: chartData.labels,
-            datasets: [{
-                label: 'Income',
-                data: chartData.income,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 159, 64, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
+function buildChart() {
+    var myChart = Highcharts.chart('myFinances', {
+        chart: {
+            type: 'bar'
         },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            },
-            legend: {
-                display: false
-            },
+        title: {
+            text: 'My income stats'
+        },
+        xAxis: {
+            categories: chartData.labels
+        },
+        yAxis: {
             title: {
-                display: true,
-                text: 'My income chart'
-            },
-        }
+                text: 'Earnings'
+            }
+        },
+        series: [{
+            name: 'Earnings',
+            data: chartData.income
+        }],
+        colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce','#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a']
     });
-
-}
-$(document).ready();
+};

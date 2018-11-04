@@ -5,8 +5,6 @@ function buildMenu(items) {
         if (items.hasOwnProperty(key)) 
         $('nav ul').append('<li class="nav-item"><a class="nav-link" href="'+ (items[key]).href + '">'+(items[key]).title+'</a></li>');
     }
-    $('#navbarSupportedContent > ul > li:nth-child(1) > a').addClass('active')
-    console.log('Link class is set to: ACTIVE')
 }
 
 function solidNavigation() {
@@ -163,36 +161,64 @@ function buildBlog (t, charNum) {
                                     </div>')
         }
 }
-// let linkMap = {};
-//     function buildMap() { 
-//         let     links = $('nav li a'),
-//         href = [],
-//         position = [];
-//         for (let i = 0; i < links.length; i++) {
-//             const element = links[i];
-//             href.push($(links[i]).attr('href'));
-//         }
-//         for (let i = 0; i < links.length; i++) {
-//             const element = $(links[i]).attr('href');
-//             position.push($(element).offset().top);
-//         }
-//         linkMap.href = href;
-//         linkMap.position = position;
-//         // console.log(linkMap.position)
-//     };
-    
+
 //     function setMenuActive(current) {
-//         // toggle class for menu
-//         if (linkMap.position.indexOf(current) > 0) {
-//             console.log('BAMMM!!!'+linkMap.position.indexOf(current))
-//         }
-//     };
+    //         // toggle class for menu
+    //         if (linkMap.position.indexOf(current) > 0) {
+        //             console.log('BAMMM!!!'+linkMap.position.indexOf(current))
+        //         }
+        //     };
+    let linkMap = {};
+    function buildMap() { 
+        let     links = $('nav li a'),
+                href = [],
+                position = [];
+        for (let i = 0; i < links.length; i++) {
+            const element = links[i];
+            href.push($(links[i]).attr('href'));
+        }
+        for (let i = 0; i < links.length; i++) {
+            const element = $(links[i]).attr('href');
+            position.push($(element).offset().top);
+        }
+        linkMap.href = href;
+        linkMap.position = position;
+    };
     function setMenuActive() {
-        console.log(`**************`)
-        console.log('Current active elemet position: ' + $('nav li .active').offset().top)
-        console.log('Active element hash: '+ $('nav li .active')[0].hash)
-        console.log('Value tu compare with: '+ $($('nav li .active')[0].hash).offset().top)
-        console.log(`**************`)
+        buildMap();
+        let min = Math.min(...linkMap.position),
+        max = Math.max(...linkMap.position),
+        scope = linkMap.href.length,
+        position = $('nav').offset().top,
+        activeLinkIndex = 0;
+        
+        if (position < min) {
+            removeClassActive();
+            addClassActive('1');
+        }
+        if (position > max) {
+            removeClassActive();
+            addClassActive(scope);
+        }
+        if (position >= min && position <= max) {
+            for (let i = 0; i < linkMap.position.length; i++) {
+                const element = linkMap.position[i];
+                if (position > element - 150) {
+                    console.log(element)
+                    activeLinkIndex = i+1;
+                    console.log('Aktyvus linkas'+activeLinkIndex)
+                    removeClassActive();
+                    addClassActive(activeLinkIndex)
+                }
+            }  
+        }
+        function addClassActive(i) {
+            $('#navbarSupportedContent > ul > li:nth-child(' + i + ') > a').addClass('active');
+        }
+
+        function removeClassActive() {
+            $('#navbarSupportedContent > ul > li a').removeClass('active');
+        }
     }
 
 // ******************************************

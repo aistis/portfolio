@@ -66,16 +66,3 @@ var blogPosts = {
     2:    {   title: 'Ab id soluta vel harum',   timestamp: '12th June 2018',    teaser: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae harum sunt atque laudantium praesentium sint alias enim. Temporibus, numquam consectetur totam necessitatibus assumenda asperiores, voluptates, ad sequi sit fugit voluptatem?',    img:'assets/projects/7.jpg'},
     3:    {   title: 'Adipisicing elit',                timestamp: '5th October 2018',  teaser: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum optio earum ducimus at. Ducimus rerum nostrum architecto harum voluptas eligendi cum magnam at corrupti veritatis unde quasi, cupiditate perferendis quas.',                             img:'assets/projects/8.jpg'},
 }
-
-var chart_data = {
-    title: 'Mano finansine situacija',
-    axis_titles: {
-        x: 'Months',
-        y: 'Cashflow, Eur'
-    },
-    data_x: ['Sausis', 'Vasaris', 'Kovas', 'Balandis'],
-    data_y: [
-        [0, 600, 200, -200],
-        [0, 400, 100, 150]
-    ]
-}
